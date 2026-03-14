@@ -12,7 +12,11 @@ with error as:
 
 $$e = r - \hat{r}$$
 
-Trained on the original Netflix dataset which is available [here](https://www.kaggle.com/datasets/netflix-inc/netflix-prize-data). I converted the data into a numpy compressed data archive (`.npz`).
+Here $\mu$ is the global average rating, $b_u$ is the user bias, $b_m$ is the movie bias, $P_u$ is the user latent factor vector, and $Q_m$ is the movie latent factor vector.
+
+Here $e$ is the error between the actual rating $r$ and the predicted rating $\hat{r}$.
+
+Trained on the original Netflix dataset which is available [here](https://www.kaggle.com/datasets/netflix-inc/netflix-prize-data). I converted the data into a numpy compressed data archive (`.npz`). You can create your own `.npz` file. I used kaggle for the data processing and training part.
 
 ## Features
 
@@ -38,8 +42,8 @@ Before running the project, make sure your environment is set up:
 
 1. **Clone the repository:**
 ```bash
-   git clone <link>
-   cd <your_folder_name>
+   git clone https://github.com/ripslinger17/Netflix-Bellkor-With-LLM
+   cd Netflix-Bellkor-With-LLM
 ```
 
 2. **Install Python dependencies:**
@@ -120,3 +124,5 @@ Once the app is running, try asking the assistant things like:
 
 
 5. **Response Generation:** The tool results are fed back into the LLM, which formats a human-friendly response and sends it back to the Streamlit UI.
+
+Happy coding.
