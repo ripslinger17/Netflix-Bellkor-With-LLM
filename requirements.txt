@@ -1,0 +1,10 @@
+fastapi
+uvicorn
+langchain-ollama
+langchain-core
+langchain-community
+streamlit
+requests
+numpy
+scikit-learn
+pydantic
