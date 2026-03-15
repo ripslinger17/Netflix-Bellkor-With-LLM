@@ -49,6 +49,10 @@ I beat the original Cinematch RMSE. 🤪
 * **Data Processing:** NumPy, Scikit-learn (for Cosine Similarity)
 * **Database:** SQLite3
 
+<div align="center">
+    <img src="https://github.com/ripslinger17/Netflix-Bellkor-With-LLM/blob/main/assets/architecture.svg" width="600" alt="Architecture Diagram">
+</div>
+
 ## Prerequisites
 
 Before running the project, make sure your environment is set up:
