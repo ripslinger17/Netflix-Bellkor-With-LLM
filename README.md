@@ -2,6 +2,8 @@
 
 This is a simple implementation of the Bellkor algorithm. The twist is that we are using an LLM to generate the answers for user questions like "Which movie should I watch?" or "Recommend related movies to 'The Godfather'" etc. The LLM will generate the answers based on the data that we have.
 
+[App Demo](https://www.github.com/ripslinger17/Netflix-Bellkor-With-LLM/assets/demo.gif)
+
 Why this project is unique? Because we only have UserID, MovieID, Ratings, and Timestamps. We do not have any other information about the movies or the users. It was a sparse matrix representation of which we only had around ~1M ratings available but the total possible combinations were ~8B combinations. I have used the original Bellkor algorithm for finding the similar movies to recommend to the user.
 
 I have followed this [paper](https://www2.seas.gwu.edu/~simhaweb/champalg/cf/papers/KorenBellKor2009.pdf) and this [paper](https://www2.seas.gwu.edu/~simhaweb/champalg/cf/papers/BellkorNetflix2008.pdf) for the implementation. I only limited myself to the baseline model with matrix factorization. The formula I used is:
@@ -17,6 +19,15 @@ Here $\mu$ is the global average rating, $b_u$ is the user bias, $b_m$ is the mo
 Here $e$ is the error between the actual rating $r$ and the predicted rating $\hat{r}$.
 
 Trained on the original Netflix dataset which is available [here](https://www.kaggle.com/datasets/netflix-inc/netflix-prize-data). I converted the data into a numpy compressed data archive (`.npz`). You can create your own `.npz` file. I used kaggle for the data processing and training part.
+## Model Performance
+**Netflix's Cinematch RMSE was *0.95***
+
+| Metric | Score (at 10 epochs) | Score (at 20 epochs) |
+|--------|-------|-------|
+| Training RMSE | 0.92 | 0.87 |
+| Probe RMSE | 1.002 | 0.94 |
+
+I beat the original Cinematch RMSE. 🤪
 
 ## Features
 
