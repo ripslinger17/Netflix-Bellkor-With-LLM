@@ -10,11 +10,11 @@ Why this project is unique? Because we only have UserID, MovieID, Ratings, and T
 
 I have followed this [paper](https://www2.seas.gwu.edu/~simhaweb/champalg/cf/papers/KorenBellKor2009.pdf) and this [paper](https://www2.seas.gwu.edu/~simhaweb/champalg/cf/papers/BellkorNetflix2008.pdf) for the implementation. I only limited myself to the baseline model with matrix factorization. The formula I used is:
 
-$$\hat{r_{um}} = \mu + b_{u} + b_{m} + P_{u}^{T} \cdot Q_{m}$$
+$$\boxed{\hat{r_{um}} = \mu + b_{u} + b_{m} + P_{u}^{T} \cdot Q_{m}}$$
 
 with error as:
 
-$$e = r - \hat{r}$$
+$$\boxed{e = r - \hat{r}}$$
 
 Here $\mu$ is the global average rating, $b_u$ is the user bias, $b_m$ is the movie bias, $P_u$ is the user latent factor vector, and $Q_m$ is the movie latent factor vector.
 
