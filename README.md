@@ -2,7 +2,9 @@
 
 This is a simple implementation of the Bellkor algorithm. The twist is that we are using an LLM to generate the answers for user questions like "Which movie should I watch?" or "Recommend related movies to 'The Godfather'" etc. The LLM will generate the answers based on the data that we have.
 
-![App Demo](https://github.com/ripslinger17/Netflix-Bellkor-With-LLM/blob/main/assets/demo.gif)
+<div align="center">
+    <img src="https://github.com/ripslinger17/Netflix-Bellkor-With-LLM/blob/main/assets/demo.gif" width="600" alt="App Demo">
+</div>
 
 Why this project is unique? Because we only have UserID, MovieID, Ratings, and Timestamps. We do not have any other information about the movies or the users. It was a sparse matrix representation of which we only had around ~1M ratings available but the total possible combinations were ~8B combinations. I have used the original Bellkor algorithm for finding the similar movies to recommend to the user.
 
